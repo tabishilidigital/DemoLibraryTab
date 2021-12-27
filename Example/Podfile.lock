@@ -1,0 +1,16 @@
+PODS:
+  - DemoLibraryTab (0.1.0)
+
+DEPENDENCIES:
+  - DemoLibraryTab (from `../`)
+
+EXTERNAL SOURCES:
+  DemoLibraryTab:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DemoLibraryTab: 319b0827ed58970cfb9988fdf0aa1119d3f679a5
+
+PODFILE CHECKSUM: 97b4d926f2f1e338b2a076b3fe8db0c53b7169dc
+
+COCOAPODS: 1.11.2

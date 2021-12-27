@@ -7,12 +7,28 @@
 //
 
 import UIKit
+import DemoLibraryTab
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let log = Logger()
+        log.printLog()
+        let frameworkBundle = Bundle(for: Logger.self)
+        guard let path = frameworkBundle.path(forResource: "Resources", ofType: "bundle") else {
+            return
+        }
+        let resourceBundle = Bundle(url: URL(fileURLWithPath: path))
+        guard let image = UIImage(named: "snoker.jpeg", in: resourceBundle, compatibleWith: nil) else {
+            return
+        }
+        print(image)
+        let imgVu = UIImageView(image: image)
+        imgVu.contentMode = .scaleAspectFit
+        imgVu.frame = view.frame
+        view.addSubview(imgVu)
     }
 
     override func didReceiveMemoryWarning() {
